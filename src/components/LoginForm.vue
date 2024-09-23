@@ -12,12 +12,8 @@ const form = reactive({
   password: ''
 })
 
-const passwordHasLetters = (str) => {
-  return /[A-Za-zА-Яа-яЁё]/.test(str)
-}
-const passwordHasDigits = (str) => {
-  return /\d/.test(str)
-}
+const passwordHasLetters = (str) => /[A-Za-zА-Яа-яЁё]/.test(str)
+const passwordHasDigits = (str) => /\d/.test(str)
 const rules = {
   email: {
     required: helpers.withMessage('Поле не заполнено', required),
